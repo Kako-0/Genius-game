@@ -1,0 +1,154 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	min-height: 100vh;
+}
+.main-game {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	width: 100%;
+	background-color: #ccc;
+}
+
+.menu {
+	position: absolute;
+	top: 30%;
+	right: 30%;
+	width: 40%;
+	height: 40%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	border-radius: 50%;
+	border: solid 1px #000a;
+	background-color: #ccc;
+	overflow: hidden;
+	z-index: 2;
+}
+
+.menu-top {
+	border-bottom: solid 2px #000;
+	width: 100%;
+	height: 80%;
+}
+#menu-btn {
+	z-index: 2;
+	color: #000;
+	font-weight: bolder;
+	font-size: 3em;
+	width: 100%;
+	height: 100%;
+}
+
+.menu-down {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	height: 100%;
+}
+.score-span {
+	margin-top: 0.5rem;
+	font-size: 1.5em;
+}
+.score {
+	background-color: #000;
+	color: rgb(255, 49, 49);
+	height: 4rem;
+	width: 6rem;
+	text-align: center;
+	font-size: 4em;
+}
+
+.genius {
+	position: relative;
+	width: 45%;
+	height: 90%;
+	border-radius: 50%;
+	background-color: #111;
+	display: grid;
+	grid-template-areas:
+		"green_ yellow_"
+		"red_ blue_";
+	grid-gap: 50px;
+	padding: 2.5rem;
+}
+
+.genius::after {
+	display: none;
+	content: "";
+	background-color: #111;
+	position: absolute;
+	top: 27%;
+	right: 27%;
+	width: 45%;
+	height: 45%;
+	border-radius: 50%;
+	border: solid 4px #ccc;
+}
+
+.green {
+	grid-area: green_;
+	background-color: rgb(32, 136, 0);
+	border: solid 2px #000;
+	border-top-left-radius: 100%;
+	border-top-right-radius: 5%;
+	border-bottom-left-radius: 5%;
+}
+.green:active,
+.green-active {
+	background-color: rgb(60, 255, 1);
+	border: solid 2px #0003;
+	box-shadow: 0 0 40px 5px rgb(60, 255, 0);
+}
+
+.yellow {
+	grid-area: yellow_;
+	background-color: rgb(255, 208, 0);
+	border: solid 2px #000;
+	border-top-right-radius: 100%;
+	border-top-left-radius: 5%;
+	border-bottom-right-radius: 5%;
+}
+.yellow:active,
+.yellow-active {
+	background-color: rgb(255, 238, 0);
+	border: solid 2px #0003;
+	box-shadow: 0 0 40px 5px rgb(255, 238, 0);
+}
+
+.red {
+	grid-area: red_;
+	background-color: rgb(209, 16, 16);
+	border: solid 2px #000;
+	border-bottom-left-radius: 100%;
+	border-bottom-right-radius: 5%;
+	border-top-left-radius: 5%;
+}
+.red:active,
+.red-active {
+	background-color: rgb(255, 0, 0);
+	border: solid 2px #0003;
+	box-shadow: 0 0 40px 5px rgb(255, 0, 0);
+}
+
+.blue {
+	grid-area: blue_;
+	background-color: rgb(0, 110, 255);
+	border: solid 2px #000;
+	border-bottom-right-radius: 100%;
+	border-bottom-left-radius: 5%;
+	border-top-right-radius: 5%;
+}
+.blue:active,
+.blue-active {
+	background-color: rgb(0, 140, 255);
+	border: solid 2px #0003;
+	box-shadow: 0 0 40px 5px rgb(0, 140, 255);
+}
